@@ -15,7 +15,16 @@ public class Account {
         this.accountType = accountType;
         this.accountNumber = idGenerator.generateUserID();
     }
-
+    public void deposit(double amount) {
+        if (amount <= 0) {
+            System.out.println("Deposit amount must be greater than zero.");
+            return;
+        }
+        balance += amount;
+        System.out.println("Amount Deposited Successfully!");
+        System.out.println("Deposited Amount: " + amount);
+        System.out.println("Updated Balance: " + balance);
+    }
     public String getAccountNumber()
     {
         return accountNumber;

@@ -45,6 +45,12 @@ public class BankApplication {
             sc.close();
             return;
         }
+
+        System.out.print("\nEnter amount to deposit: ");
+        double depositAmount = sc.nextDouble();
+
+        account.deposit(depositAmount);
+
         sc.close();
 
         System.out.println("Account created successfully!");
